@@ -109,7 +109,7 @@ As noted in §2.3, above, simplistic Data Minimization can cause other human rig
 2. Ensure that the fingerprint is unidirectional, so that the fingerprint can prove the existence of the data, but the data cannot be derived from the fingerprint.
 3. Maintain the validity of authenticity checks such as signatures through the fingerprint.
 
-A fingerprint that is generated through a hash function such as SHA-256 or a newer function such as BLAKE3 will generally meet the first two requirement.
+A fingerprint that is generated through a hash function such as SHA-256 or a newer function such as BLAKE3 will generally meet the first two requirements.
 
 The third requirement is designed to support the requirements for Data Minimization in §3.1.1, above. If data is hashed, but any signature is applied to the hash rather than the original data, then a holder can choose to elide the data or not, as they see fit, but the signature still remains valid. 
 
@@ -121,23 +121,23 @@ Because data does not always need to be shared to provide the verification requi
 2. Support the easy creation of an inclusion proof that demonstrate how specific data can be hashed to create that specific fingerprint.
 3. Enable any holder to create that inclusion proof, not just an issuer.
 
-Through this methodology, a holder can create a proof for a specific bit of data, such as their residence in a specific country or state, demonstrate that proof’s creation, and show that it matches the hash of elided data. However, the holder does so only if and when they wish: the data is never known unless they do so.
+Through this methodology, a holder can create a proof for a specific bit of data, such as their residence in a specific country or state, demonstrate that proof’s creation, and show that it matches the hash of elided data. However, the holder does so only if and when they wish: the data is never known unless they do so. This provides very strong Data Minimization that is holder controlled.
 
 Though other methodologies exist for proving the content of data, such as Zero-Knowledge Proofs and BBS+ Signatures, inclusion proofs based on hashes provide a much easier solution that is pragmatically more likely to be implemented and thus is more accessible and useable today.
 
 ### Facilitate Herd Privacy
 
-Support for inclusion proofs can also allow for the use of herd privacy, where data about a specific user is contained within a much larger hash of data, which can be widely published without danger. This puts all the agency for data revelation in an individual user’s hand, and does it without any need to “phone home”, meaning that not even the original publisher of the data would know when that data were being checked.
+Support for inclusion proofs can also allow for the use of herd privacy, where data about a specific user is contained within a much larger hash of data, which can be widely published without danger. This puts all the agency for data revelation in an individual user’s hand and does it without any need to “phone home”, meaning that not even the original publisher of the data would know when that data were being checked.
 
 To ensure that inclusion proofs can be extended to herd privacy, a specification MUST:
 
 1. Use a branching structure for data storage such as a Merkle Tree where hashes can be further hashed together at high levels in a well-known, regularized way.
 2. Allow for the publication of top-level or high-level hashes.
-3. Enable individual holders to reveal paths that connect their individual data up to the top-level or high-level hash through any number of branches.
+3. Enable individual holders to independently, without aid or assistance, reveal paths that connect their individual data up to the top-level or high-level hash through any number of branches.
 4. Build that structure in such a way that a minimum of other hashes are revealed when a user reveals a path to their own data; or else ensure that any other hashes revealed are worthless without knowledge of secret data, such as a salt.
-5. Otherwise support the creation of inclusion proofs for proving their low-level individual data.
+5. Otherwise support the creation of inclusion proofs for proving an individual holder's low-level individual data without the individual needing to contact the publisher of the data in any way.
 
-Ensuring herd privacy in part focuses upon empowering the user, but it also depends on a thoughtful creation of the hash tree structure, such that other information can’t be guessed from the revelation of hashes.
+Herd privacy provides further benefits to privacy because a credential publisher can publish data without ever having contact with credential holders, and those holders can then choose to reveal that data, or not, all without any knowledge of the publisher. Requirements #1-4 suggest one way to do so using hashed elision and merkle trees such that other information can’t be guessed from the revelation of hashes, but the requirement #5 says that other methodologies would be acceptable provided it meets the core needs of a herd privacy system.
 
 ## Optional Areas of Work
 
