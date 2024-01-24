@@ -94,14 +94,14 @@ This section tries to identify and structure areas of work to address the aforem
 
 As suggested by RFC 6973, Data Minimization is a prime methodology for improving privacy and reducing problems such as Correlation, Secondary Use, and Disclosure.
 
-To fully support Data Minimization, a specification must:
+To fully support Data Minimization, a specification MUST:
 
 1. Allow for the elision of some content from a larger package of data.
 2. Allow for the holder of that data to do that elision, rather than restricting it to only issuers.
 
 ### Incorporate Deterministic Hashing
 
-As noted in §2.3, above, simplistic Data Minimization can cause other human rights problems such as a lack of Authenticity or Integrity checking. This can be resolved in a specification by requiring a fingerprint that can be used to verify elided data. It must:
+As noted in §2.3, above, simplistic Data Minimization can cause other human rights problems such as a lack of Authenticity or Integrity checking. This can be resolved in a specification by requiring a fingerprint that can be used to verify elided data. It MUST:
 
 1. Allow elided data to be verified with a fingerprint.
 2. Maintain the validity of authenticity checks such as signatures through that fingerprint.
@@ -111,7 +111,7 @@ This can typically be done throug a hash function such as SHA-256 or a newer fun
 
 ### Enable Inclusion Proofs
 
-Because data does not always need to be shared to provide the verification required by a validator, support of data proofs can provide additional privacy and human rights benefits. To support this, a specification must:
+Because data does not always need to be shared to provide the verification required by a validator, support of data proofs can provide additional privacy and human rights benefits. To support this, a specification MUST:
 
 1. Allow for the revelation of specific fingerprints.
 2. Support the easy creation of an inclusion proof that demonstrate how specific data can be hashed to create that specific fingerprint.
@@ -125,7 +125,7 @@ Though other methodologies exist for proving the content of data, such as Zero-K
 
 Support for inclusion proofs can also allow for the use of herd privacy, where data about a specific user is contained within a much larger hash of data, which can be widely published without danger. This puts all the agency for data revelation in an individual user’s hand, and does it without any need to “phone home”, meaning that not even the original publisher of the data would know when that data were being checked.
 
-To ensure that inclusion proofs can be extended to herd privacy, a specification must:
+To ensure that inclusion proofs can be extended to herd privacy, a specification MUST:
 
 1. Use a branching structure for data storage such as a Merkle Tree where hashes can be further hashed together at high levels in a well-known, regularized way.
 2. Allow for the publication of top-level or high-level hashes.
