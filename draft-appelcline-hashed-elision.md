@@ -46,11 +46,9 @@ This document discusses the privacy and human rights benefits of data minimizati
 
 # Introduction
 
-Current IETF guidelines for privacy and human rights considerations {{RFC6973}} in internet protocols lack the specificity needed for practical implementation, leading to privacy threats such as correlation, secondary use, and unnecessary disclosure of data.
+IETF released guidelines for privacy considerations in 2013 with {{RFC6973}} and then expanded upon that with human-rights considerations in 2017 with {{RFC8280}}. Both RFCs provide thoughtful ideas for how privacy can be improved in internet protocols, and how that can support human rights on the internet.
 
-IETF released guidelines for privacy considerations in 2013 with RFC 6973 and then expanded upon that with human-rights considerations in 2017 with {{RFC8280}}. Both RFCs provide thoughtful ideas for how privacy can be improved in internet protocols, and how that can support human rights on the internet.
-
-However, as generalized guidelines the RFCs don’t provide the specifics that might be required to incorporate these guidelines into new protocols. This document suggests more specific areas of work based in part on the Data Minimization suggestions of §6.1 of RFC 6973, and expands them to also support some of the Human Rights Guidelines outlined in §6.2 of RFC 8280.
+However, as generalized guidelines the RFCs don’t provide the specifics that might be required to incorporate these guidelines into new protocols. This leads to privacy threats such as correlation, secondary use, and unnecessary disclosure of data. This document suggests more specific areas of work based in part on the Data Minimization suggestions of §6.1 of RFC 6973, and expands them to also support some of the Human Rights Guidelines outlined in §6.2 of RFC 8280.
 
 # Problem Statement
 
@@ -179,14 +177,16 @@ However, the question also remains open as to whether there might be more expans
 
 # Security Considerations
 
-The biggest security considerations focus on the strength of hashing algorithms (and encryption algorithms if they’re used). Potential threats to hashes and encryption such as quantum computing would also result in threats to any hashed data elision system.
+Hashed data elision itself is intended to strengthen communication security, primarily by enhancing confidentiality (through elision) while also maintaining data integrity (through hashing). Supporting it with a signature system, as Gordian Envelope does, also allows for peer entity authentication, creating a strong foundation for overall communication security.
+
+However, that security depends onthe strength of hashing algorithms (and encryption/signature algorithms if they’re used). Strong, unbroken hashes are required. Potential threats to hashes and encryption such as quantum computing would also result in threats to any hashed data elision system.
 
 # IANA Considerations
 
-IANA is separately being queried on the allocation of certain CBOR tags for IANA.
+Gordian Envelope has already been assigned CBOR tag #200 by IANA.
 
 --- back
 
 # Acknowledgments
 
-Forthcoming.
+The authors are grateful for the support of the CBOR working group in discussions of Gordian Envelope and general guidance within the IETF.
