@@ -151,13 +151,13 @@ A hashed data elision system can be expanded to support both encryption and comp
 
 Incorporating encryption into a data specification offers the highest level of privacy and of data minimization possible, as data can only be viewed by select individual with the decryption key. This is especially important for Confidentiality, which is referenced in §6.2.15 of RFC 8280.
 
-Hashing encryption primarily improves Authenticity, per §6.2.17 of RFC 8280. As with other sorts of elided data, signatures will remain valid even following compression, provided the signatures are applied to the data hash, not the original data.
+Hashing encrypted data also improves Authenticity, per §6.2.17 of RFC 8280. As with other sorts of elided data, signatures will remain valid even following compression, provided the signatures are applied to the data hash, not the original data.
 
 ### Address Additional Human Rights Threats
 
-As currently imagined, the Gordian Envelope Internet Draft also offers support for several other Guidelines for Human Rights Considerations that are listed in §6.2 of RFC 8280:
+As currently imagined, the Gordian Envelope Internet-Draft also supports several other Guidelines for Human Rights Considerations that are listed in §6.2 of RFC 8280:
 
-- Privacy (§6.2.2). Besides the obvious privacy benefits of data minimization, Gordian Envelope also improves privacy through optional usage of metadata, which can be used to document the sensitivity of contents, retention limits, etc.
+- Privacy (§6.2.2). Besides the obvious privacy benefits of Data Minimization, Gordian Envelope also can improve privacy through optional usage of metadata, which can be used to document the sensitivity of contents, retention limits, etc.
 - Accessibility (§6.2.11). Metadata can also be used to ensure accessibility and internationalization of data through inclusions of references with a variety of localizations.
 - Censorship Resistance (§6.2.6). Gordian Envelope is built to support SCIDs, or self-certifying identifiers, which can be used to avoid reuse of existing identifiers that might be associated with persons or content.
 - Open Standards (§6.2.7). As an Internet Draft, Gordian Envelope represents an open standard. It can support interoperable exchange of data, which is vital for human rights.
