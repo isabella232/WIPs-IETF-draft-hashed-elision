@@ -1,4 +1,4 @@
-# Deterministic CBOR (dCBOR) IETF Internet Draft
+# Deterministic Hashed Data Elision IETF Internet Draft
 
 This is the working area for the individual Internet-Draft, "draft-appelcline-hashed-elision".
 
