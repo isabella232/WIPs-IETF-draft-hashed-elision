@@ -183,7 +183,7 @@ However, that security depends onthe strength of hashing algorithms (and encrypt
 
 # IANA Considerations
 
-Gordian Envelope has already been assigned CBOR tag #200 by IANA.
+This document has no IANA actions. Gordian Envelope has already been assigned CBOR tag #200 by IANA.
 
 --- back
 
