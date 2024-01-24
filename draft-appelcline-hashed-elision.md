@@ -173,7 +173,7 @@ Gordian Envelope {{GordianEnvelope}} is a fundamentally simple data format that 
 
 # Privacy Considerations
 
-As outlined, the concept of hashed data elision and, more specifically the Gordian Envelope specification, provide a wide variety of privacy advancements.
+As outlined, the general concept of hashed data elision and the specific design of Gordian Envelope provide a wide variety of privacy advancements. They offer strong support for Data Minimization and other guidelines found in RFC 6973 and RFC 8280.
 
 The biggest remaining privacy concern is of accidental correlation that can arise if different parties have different versions of the same data, which has been elided in different ways. This is currently seen as an acceptable side-effect of an elision system that allows for Authenticity and Integrity in the system, and can be offset by careful creation of Envelope structures, such as gathering small groups of data into distinct, elided branches.
 
@@ -181,9 +181,9 @@ However, the question also remains open as to whether there might be more expans
 
 # Security Considerations
 
-Hashed data elision itself is intended to strengthen communication security, primarily by enhancing confidentiality (through elision) while also maintaining data integrity (through hashing). Supporting it with a signature system, as Gordian Envelope does, also allows for peer entity authentication, creating a strong foundation for overall communication security.
+Hashed data elision is intended to strengthen communication security, primarily by enhancing confidentiality (through elision) while also maintaining data integrity (through hashing). Supporting this with a signature system that signs hashes rather than original data also allows for peer entity authentication, creating a strong foundation for overall communication security.
 
-However, that security depends onthe strength of hashing algorithms (and encryption/signature algorithms if they’re used). Strong, unbroken hashes are required. Potential threats to hashes and encryption such as quantum computing would also result in threats to any hashed data elision system.
+However, that security depends on the strength of hashing algorithms and encryption/signature algorithms. Strong, unbroken hashes and encryption schemes are required. Potential threats to hashes and encryption such as quantum computing would result in threats to any hashed data elision system.
 
 # IANA Considerations
 
