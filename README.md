@@ -9,7 +9,7 @@ This is the working area for the individual Internet-Draft, "draft-appelcline-ha
 
 ## Change History
 
-Not submitted to IETF yet.
+Feb 1, 2024: Initial draft.
 
 ## Contributing
 
