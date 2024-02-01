@@ -103,11 +103,11 @@ Elision is the obvious requirement for Data Minimization: it's the removal of da
 
 ### Incorporate Deterministic Hashing
 
-As noted in §2.3, above, simplistic Data Minimization can cause other human rights problems such as a lack of Authenticity or Integrity checking. This can be resolved in a specification by requiring a fingerprint that can be used to verify elided data. 
+As noted in §2.3, above, simplistic Data Minimization can cause other human rights problems such as a lack of Authenticity or Integrity checking. This can be resolved in a specification by requiring a fingerprint that can be used to verify elided data.
 
 To incorporate deterministic hashing, a specification MUST:
 
-1. Allow elided data to be verified with a fingerprint. 
+1. Allow elided data to be verified with a fingerprint.
 2. Ensure that the fingerprint is unidirectional, so that the fingerprint can prove the existence of the data, but the data cannot be derived from the fingerprint.
 3. Maintain the validity of authenticity checks by requirements that any signatures be made across the fingerprint not the original data.
 
@@ -117,7 +117,7 @@ The third requirement is designed to support the requirements for Data Minimizat
 
 ### Enable Inclusion Proofs
 
-Because data does not always need to be shared to provide the verification required by a validator, support of data proofs can provide additional privacy and human rights benefits. 
+Because data does not always need to be shared to provide the verification required by a validator, support of data proofs can provide additional privacy and human rights benefits.
 
 To enable inclusion proofs, a specification MUST:
 
