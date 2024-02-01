@@ -3,9 +3,9 @@
 This is the working area for the individual Internet-Draft, "draft-appelcline-hashed-elision".
 
 * [Editor's Copy](https://blockchaincommons.github.io/WIPs-IETF-draft-hashed-elision/draft-appelcline-hashed-elision.html)
-<!-- * [Datatracker Page](https://datatracker.ietf.org/doc/draft-appelcline-hashed-elision) -->
-<!-- * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-appelcline-hashed-elision) -->
-<!-- * [Compare Editor's Copy to Individual Draft](https://BlockchainCommons.github.io/WIPs-IETF-draft-hashed-elision/#go.draft-appelcline-hashed-elision.diff) -->
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-appelcline-hashed-elision)
+* [Individual Draft](https://datatracker.ietf.org/doc/html/draft-appelcline-hashed-elision)
+* [Compare Editor's Copy to Individual Draft](https://BlockchainCommons.github.io/WIPs-IETF-draft-hashed-elision/#go.draft-appelcline-hashed-elision.diff)
 
 ## Change History
 
